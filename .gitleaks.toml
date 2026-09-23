@@ -1,0 +1,14 @@
+# gitleaks config: the default rules plus one narrow allowlist.
+# demo/ is a deliberately insecure Claude Code setup that Hank's tests scan.
+# Its GitHub token is fake and must stay in place so the detector has
+# something to find. The allowlist matches that exact value in that one file,
+# so a real secret anywhere else (or a different one in demo/) still fails CI.
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Intentional fake token in the demo fixture"
+condition = "AND"
+paths = ['''^demo/\.mcp\.json$''']
+regexes = ['''^ghp_Ab1Cd2Ef3Gh4Ij5Kl6Mn7Op8Qr9St0Uv1Wx2$''']

@@ -1,0 +1,71 @@
+{
+  "_comment": "Swap or add GIFs freely. Each severity shows a random reaction GIF from its list (deterministic per finding). Empty list or a broken URL falls back to the emoji, so the card never looks broken. Paste any direct .gif URL.",
+  "critical": {
+    "emoji": "🔥",
+    "caption": "THIS IS FINE.",
+    "gifs": [
+      "https://media.giphy.com/media/NTur7XlVDUdqM/giphy.gif",
+      "https://media.giphy.com/media/QMHoU66sBXqqLqYvGO/giphy.gif",
+      "https://media.giphy.com/media/1rNWZu4QQqCUaq434T/giphy.gif",
+      "https://media.giphy.com/media/Z9P7Kbj8pjVxuFh9UT/giphy.gif",
+      "https://media.giphy.com/media/8zyppUPi4lIcplZxcI/giphy.gif",
+      "https://media.giphy.com/media/3o7TKL9JE2dDb7pj0I/giphy.gif",
+      "https://media.giphy.com/media/l2QEgWxqxI2WJCXpC/giphy.gif",
+      "https://media.giphy.com/media/KZy3dUmfAkku9YS3sk/giphy.gif"
+    ]
+  },
+  "high": {
+    "emoji": "😰",
+    "caption": "Big, big yikes.",
+    "gifs": [
+      "https://media.giphy.com/media/HUkOv6BNWc1HO/giphy.gif",
+      "https://media.giphy.com/media/h7VZeudL5u0N6onoI7/giphy.gif",
+      "https://media.giphy.com/media/FoThOBFT1zCub4WsvP/giphy.gif",
+      "https://media.giphy.com/media/5lNqZ6xXiyQBwGaCoK/giphy.gif",
+      "https://media.giphy.com/media/SiibX1NXc4JhL7JVS7/giphy.gif",
+      "https://media.giphy.com/media/3oEdv0Kle09oH9GqxW/giphy.gif",
+      "https://media.giphy.com/media/R0RaI63M3g7qdaLnmB/giphy.gif",
+      "https://media.giphy.com/media/jcbsThcVP2yFa/giphy.gif"
+    ]
+  },
+  "medium": {
+    "emoji": "👀",
+    "caption": "...we need to talk.",
+    "gifs": [
+      "https://media.giphy.com/media/NO37xAoHt2jvhxqBcD/giphy.gif",
+      "https://media.giphy.com/media/BJVJxagR3GG4w/giphy.gif",
+      "https://media.giphy.com/media/yyq0WXMv720OcpZvmA/giphy.gif",
+      "https://media.giphy.com/media/WRuBiZKB6xgsS9DrFA/giphy.gif",
+      "https://media.giphy.com/media/38vz5MBF9gF4Q/giphy.gif",
+      "https://media.giphy.com/media/26BkO5fkr0Kh7RhHG/giphy.gif",
+      "https://media.giphy.com/media/s0PwOijk682OPn3rwy/giphy.gif",
+      "https://media.giphy.com/media/JaNtIG4UnKzD2/giphy.gif"
+    ]
+  },
+  "low": {
+    "emoji": "🤷",
+    "caption": "Eh. Noted.",
+    "gifs": [
+      "https://media.giphy.com/media/SAHGcjT1jNvDB6oxI8/giphy.gif",
+      "https://media.giphy.com/media/vqKlNf8jpBB7O/giphy.gif",
+      "https://media.giphy.com/media/w0mylo7p4OXUQ/giphy.gif",
+      "https://media.giphy.com/media/12wQni7Ylp8mek/giphy.gif",
+      "https://media.giphy.com/media/iA8jqAN2GXSTe/giphy.gif",
+      "https://media.giphy.com/media/LlE3uMF20U7Ys/giphy.gif",
+      "https://media.giphy.com/media/jEirVKZl0JytW/giphy.gif",
+      "https://media.giphy.com/media/xUPGclwjEhqp5zi0bm/giphy.gif"
+    ]
+  },
+  "info": {
+    "emoji": "ℹ️",
+    "caption": "Just so you know.",
+    "gifs": [
+      "https://media.giphy.com/media/3o752kakMLKVv5Jzpu/giphy.gif",
+      "https://media.giphy.com/media/5TD4dseytpaIhYbyWq/giphy.gif",
+      "https://media.giphy.com/media/VjLYJ3KwrRe6xZ1BwN/giphy.gif",
+      "https://media.giphy.com/media/EYUNo9AHh1qvx87fH1/giphy.gif",
+      "https://media.giphy.com/media/JwkxjWXEZeqRz5Y4QO/giphy.gif",
+      "https://media.giphy.com/media/vaCubgL0e8nSoTfCD2/giphy.gif"
+    ]
+  }
+}

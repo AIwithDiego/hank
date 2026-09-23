@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+hank-report.md
+hank-report.html
+report-card.html
+.playwright-mcp/
+.DS_Store
+.env
+.pytest_cache/
+
+# Internal video script, not part of the release
+LOOM_SCRIPT.md

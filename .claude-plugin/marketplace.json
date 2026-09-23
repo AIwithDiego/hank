@@ -1,0 +1,14 @@
+{
+  "name": "hank-security",
+  "description": "AIwithDiego's security tooling for Claude Code, starting with Hank, the AI-security auditor.",
+  "owner": {
+    "name": "AIwithDiego"
+  },
+  "plugins": [
+    {
+      "name": "hank",
+      "source": "./",
+      "description": "AI-security audit + training for your Claude Code agentic OS. OWASP LLM Top 10 scan with a meme-powered report card, plus Hank Academy: a gamified security quiz with streaks, ranks, and badges."
+    }
+  ]
+}

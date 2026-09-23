@@ -1,0 +1,13 @@
+{
+  "name": "hank",
+  "displayName": "Hank: AI-Security Audit & Academy",
+  "description": "A security analyst for your Claude Code agentic OS. Scans CLAUDE.md, skills, .mcp.json, settings, and hooks for prompt injection, tool poisoning, leaked secrets, over-broad permissions, and risky hooks, mapped to the OWASP LLM Top 10 (2025), and hands back a meme-powered Security Report Card. Then trains you on what it found: Hank Academy is a gamified security quiz with XP, ranks, daily streaks, and badges that show up on your report card.",
+  "version": "1.2.0",
+  "author": {
+    "name": "AIwithDiego"
+  },
+  "homepage": "https://github.com/aiwithdiego/hank",
+  "repository": "https://github.com/aiwithdiego/hank",
+  "license": "MIT",
+  "keywords": ["security", "ai-security", "owasp", "prompt-injection", "mcp", "claude-code", "audit", "quiz", "security-training", "gamification"]
+}

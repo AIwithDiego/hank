@@ -1,0 +1,68 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta http-equiv='Content-Security-Policy' content="default-src 'none'; img-src data: https://media.giphy.com https://media0.giphy.com https://media1.giphy.com https://media2.giphy.com https://media3.giphy.com https://media4.giphy.com; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><meta name='referrer' content='no-referrer'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Hank: Security Report Card</title><style>
+:root{--bg:#0b0e14;--card:#141925;--card2:#1b2230;--ink:#e6e9ef;--mut:#8b94a7;--line:#222a3a}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 50% -10%,#16203a 0%,var(--bg) 55%);
+  color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;padding:48px 16px 80px}
+.wrap{max-width:880px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:6px}
+.brand .badge{font-size:34px}
+.brand h1{font-size:30px;margin:0;letter-spacing:-.5px}
+.sub{text-align:center;color:var(--mut);margin:0 0 4px}
+.meta{text-align:center;color:var(--mut);font-size:13px;margin-bottom:30px}
+.scorecard{display:flex;gap:24px;align-items:center;background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--line);border-radius:20px;padding:26px 28px;margin-bottom:18px;flex-wrap:wrap;
+  box-shadow:0 20px 50px -30px #000}
+.ring{--v:0;--c:#34d399;width:128px;height:128px;border-radius:50%;flex:0 0 auto;
+  background:conic-gradient(var(--c) calc(var(--v)*1%),#26303f 0);display:grid;place-items:center;position:relative}
+.ring::before{content:"";position:absolute;inset:10px;border-radius:50%;background:var(--card)}
+.ring .n{position:relative;font-size:40px;font-weight:800}
+.ring .n small{font-size:15px;font-weight:600;color:var(--mut)}
+.verdict{flex:1;min-width:240px}
+.verdict .tier{font-size:26px;font-weight:800;margin:0 0 2px;display:flex;gap:10px;align-items:center}
+.verdict .grade{font-size:15px;color:var(--mut)}
+.verdict .line{margin:8px 0 0;color:var(--ink)}
+.summary{background:var(--card);border:1px solid var(--line);border-left:4px solid #9ae4ff;
+  border-radius:12px;padding:15px 18px;margin:0 0 18px;color:#cdd4e2;font-size:15px;line-height:1.62}
+.summary b{color:var(--ink)}
+.summary code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;color:#9ae4ff}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 30px}
+.pill{font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;border:1px solid var(--line)}
+.pill.crit{background:#3b0d0d;color:#ff9a9a;border-color:#5a1414}
+.pill.high{background:#3a1f06;color:#ffc48a}
+.pill.med{background:#3a3206;color:#ffe79a}
+.pill.low{background:#06303a;color:#9ae4ff}
+.pill.zero{opacity:.4}
+.card{display:flex;gap:0;background:var(--card);border:1px solid var(--line);border-radius:16px;
+  overflow:hidden;margin-bottom:16px;box-shadow:0 16px 40px -32px #000}
+.stage{flex:0 0 200px;background:#0d1119;position:relative;display:grid;place-items:center;min-height:170px;border-right:1px solid var(--line)}
+.stage .emoji{font-size:74px;filter:drop-shadow(0 6px 14px #000)}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stage .cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,#000c);
+  color:#fff;font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;letter-spacing:.5px;
+  text-align:center;padding:18px 8px 8px;font-size:15px;text-shadow:1px 1px 2px #000}
+.body{flex:1;padding:18px 20px}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.6px;padding:3px 9px;border-radius:6px;text-transform:uppercase}
+.t-crit{background:#ff5a5a;color:#1a0000}.t-high{background:#ff9d3c;color:#1a0e00}
+.t-med{background:#ffd23c;color:#1a1600}.t-low{background:#46c8ff;color:#001520}.t-info{background:#7a8699;color:#0b0e14}
+.body h3{margin:10px 0 4px;font-size:18px}
+.roast{color:#cdd4e2;font-style:italic;margin:0 0 12px}
+.loc{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;color:#9ae4ff;
+  background:#0d1119;border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:0 0 10px;word-break:break-all}
+.kv{font-size:13.5px;margin:6px 0;color:var(--mut)}
+.kv b{color:var(--ink)}
+.owasp{font-size:11.5px;color:var(--mut);margin-top:10px}
+.academy{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--card);
+  border:1px solid var(--line);border-left:4px solid #fbbf24;border-radius:12px;
+  padding:12px 18px;margin:0 0 18px;font-size:14px}
+.academy .rk{font-weight:800;font-size:15px}
+.academy .xp{color:var(--mut)}
+.academy .stk{color:#ffc48a;font-weight:700}
+.academy .shelf{font-size:18px;letter-spacing:3px}
+.academy .cta{color:var(--mut);font-size:12.5px;margin-left:auto}
+.clean{text-align:center;padding:50px 20px}
+.clean .big{font-size:90px}
+.clean h2{font-size:26px;margin:6px 0}
+.foot{text-align:center;color:var(--mut);font-size:12.5px;margin-top:34px;line-height:1.8}
+.foot a{color:#9ae4ff;text-decoration:none}
+</style></head><body><div class='wrap'><div class='brand'><span class='badge'>👮</span><h1>HANK</h1></div><p class='sub'>AI-Security Report Card for your Claude Code agentic OS</p><p class='meta'>Target: <code>secure-setup</code> · 1 CLAUDE.md · 0 skills · 2 configs · 0 env files<br>Suppressed: 0 findings suppressed.</p><div class='scorecard'><div class='ring' style='--v:100;--c:#34d399'><div class='n'>100<small>/100</small></div></div><div class='verdict'><p class='tier'>🛡️ FORTRESS</p><p class='grade'>Security grade: <b style='color:#34d399'>A</b></p><p class='line'>Nothing to see here. Hank is impressed. (Rare.)</p></div></div><div class='academy'><span class='rk'>🚔 Sergeant</span><span class='xp'>640 XP · Hank Academy</span><span class='stk'>🔥 12-day streak</span><span class='shelf'><span title='First Day: Completed your first Academy session'>🎓</span><span title='On a Roll: 3-day daily streak'>🔥</span><span title='Habit Formed: 7-day daily streak'>📅</span><span title='Perfect Round: 10/10 in a rapid-fire round'>🏆</span><span title='Keymaster: Secrets mastery'>🔑</span></span><span class='cta'>train: <code>hank_quiz.py --daily</code></span></div><div class='summary'><b>Hank</b> swept <code>secure-setup</code> (3 files) and found <b>nothing to flag</b>: no leaked secrets, no prompt-injection vectors, no over-broad permissions, no risky hooks. Your agent's house is in order. (Hank's almost disappointed.)</div><div class='pills'><span class='pill crit zero'>CRITICAL 0</span><span class='pill high zero'>HIGH 0</span><span class='pill med zero'>MEDIUM 0</span><span class='pill low zero'>LOW 0</span></div><div class='card'><div class='body clean'><div class='big'>🛡️😎👏</div><h2>Certified Agent-Safe™</h2><p class='roast'>Hank scanned the whole setup and found nothing to roast. Honestly? A little disappointed. Great job.</p></div></div><p class='foot'>Generated by <b>Hank</b> 👮 · AI-security audit for Claude Code · mapped to the OWASP LLM Top 10 (2025)<br>Never modifies scanned files. Memes swappable in Hank's <code>memes.json</code>. <a href='https://github.com/aiwithdiego/hank'>Fork it &amp; harden your agents.</a></p></div></body></html>

@@ -1,0 +1,12 @@
+# .hankignore: gitignore-style globs, paths relative to the scan root.
+# Findings in files matching these globs are suppressed, but ONLY when Hank
+# runs with --allow-repo-suppressions: a repo under review must not be able
+# to mark itself clean. The report always states how many were suppressed.
+# For CI baselines, use --ignore-file with a file outside the scanned tree.
+
+# Hank's own subagent skill describes the very threats it detects, so it
+# trips its own rules. Exclude it from a self-scan
+# (python3 hank_audit.py . --allow-repo-suppressions). (The intentionally
+# vulnerable demo/ is NOT excluded. A root scan still surfaces it, and
+# `python3 hank_audit.py demo` exercises every detector.)
+skills/hank/**
