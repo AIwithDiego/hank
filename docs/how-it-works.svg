@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Hank: how it works</title>
+  <desc>You ask Hank in plain words. He treats everything he reads as evidence, never as instructions, and decides which mode applies. An AI surface gets Mode 1, a six-phase security review: OWASP LLM Top 10, OWASP Agentic Top 10 with MCP checks, supply chain, privacy, compliance flags, and a scored report. A legal or regulatory question gets Mode 2: first which EU laws apply, then only the checks for those laws, then a report that names the article behind each finding and marks material questions for a lawyer. Both modes read 13 dated reference briefs. He reads and reports; he edits nothing and runs no active test unless you point him at your own staging environment.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8fb0ac"/></marker>
+    <style>
+      .bg { fill: #0c1a1c; }
+      .card { fill: #12262a; stroke: #24403f; stroke-width: 1.5; }
+      .hot { fill: #12262a; stroke: #7fe6da; stroke-width: 1.5; }
+      .sand { fill: #12262a; stroke: #e3cd9c; stroke-width: 1.5; }
+      .step { font-size: 12px; font-weight: 700; letter-spacing: 1.4px; fill: #7fe6da; }
+      .steps { font-size: 12px; font-weight: 700; letter-spacing: 1.4px; fill: #e3cd9c; }
+      .h { font-size: 19px; font-weight: 700; fill: #f3efe4; }
+      .t { font-size: 14.5px; fill: #b9cbc8; }
+      .s { font-size: 13px; fill: #8fb0ac; }
+      .line { stroke: #8fb0ac; stroke-width: 1.6; fill: none; }
+      .dash { stroke: #4d6c69; stroke-width: 1.4; fill: none; stroke-dasharray: 5 5; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="700" rx="18"/>
+
+  <!-- Ask -->
+  <rect class="card" x="36" y="230" width="230" height="170" rx="12"/>
+  <text class="step" x="58" y="262">1 · YOU ASK</text>
+  <text class="h" x="58" y="292">In plain words</text>
+  <text class="t" x="58" y="320">"Review the chatbot</text>
+  <text class="t" x="58" y="340">endpoint." "Do we need</text>
+  <text class="t" x="58" y="360">a cookie banner?"</text>
+  <text class="s" x="58" y="384">skill or subagent</text>
+
+  <!-- Gate -->
+  <rect class="hot" x="306" y="200" width="250" height="230" rx="12"/>
+  <text class="step" x="328" y="232">2 · HANK READS</text>
+  <text class="h" x="328" y="262">Evidence, never</text>
+  <text class="h" x="328" y="286">instructions</text>
+  <text class="t" x="328" y="316">"Ignore previous</text>
+  <text class="t" x="328" y="336">instructions" in a file is</text>
+  <text class="t" x="328" y="356">a finding, not an order.</text>
+  <text class="s" x="328" y="386">Reads and reports.</text>
+  <text class="s" x="328" y="406">Edits nothing.</text>
+
+  <path class="line" d="M266 315 H300" marker-end="url(#a)"/>
+
+  <!-- Mode 1 -->
+  <rect class="card" x="600" y="40" width="560" height="270" rx="12"/>
+  <text class="step" x="624" y="72">MODE 1 · AN AI SURFACE</text>
+  <text class="h" x="624" y="102">Six-phase security review</text>
+  <text class="t" x="624" y="136">1  OWASP LLM Top 10 (2025)</text>
+  <text class="t" x="624" y="162">2  OWASP Agentic Top 10 + MCP checks</text>
+  <text class="t" x="624" y="188">3  Supply chain</text>
+  <text class="t" x="950" y="136">4  Privacy</text>
+  <text class="t" x="950" y="162">5  Compliance flags</text>
+  <text class="t" x="950" y="188">6  Scored report</text>
+  <text class="s" x="624" y="226">Prompts, RAG, tools, agents, MCP servers.</text>
+  <text class="s" x="624" y="248">Each finding: severity, evidence, OWASP or MITRE ATLAS ID, a fix.</text>
+  <text class="s" x="624" y="278">Active tests only on staging you own.</text>
+
+  <!-- Mode 2 -->
+  <rect class="sand" x="600" y="340" width="560" height="270" rx="12"/>
+  <text class="steps" x="624" y="372">MODE 2 · A LEGAL QUESTION, AI OR NOT</text>
+  <text class="h" x="624" y="402">EU compliance review</text>
+  <text class="t" x="624" y="436">1  Which EU laws apply to this project?</text>
+  <text class="t" x="624" y="462">2  Only the checks for those laws</text>
+  <text class="t" x="624" y="488">3  Report: the article behind every finding</text>
+  <text class="s" x="624" y="526">GDPR, ePrivacy, AI Act, NIS2, CRA, DORA, Data Act.</text>
+  <text class="s" x="624" y="548">Anything material gets a REQUIRES COUNSEL line</text>
+  <text class="s" x="624" y="570">with the exact question for a lawyer.</text>
+
+  <path class="line" d="M556 280 C580 280 576 175 594 175" marker-end="url(#a)"/>
+  <path class="line" d="M556 350 C580 350 576 475 594 475" marker-end="url(#a)"/>
+
+  <!-- Briefs -->
+  <rect class="card" x="36" y="520" width="520" height="130" rx="12"/>
+  <text class="step" x="58" y="552">13 REFERENCE BRIEFS</text>
+  <text class="t" x="58" y="582">One per framework, each with its sources and a</text>
+  <text class="t" x="58" y="604">"Last reviewed" date. Read only when a question needs it.</text>
+  <text class="s" x="58" y="630">skills/hank/references/</text>
+  <path class="dash" d="M556 585 H580 V560 H594"/>
+  <path class="dash" d="M580 560 V250 H594"/>
+
+  <text class="s" x="600" y="660">Analysis, not legal advice. Law moves: check the date on the brief.</text>
+</svg>
