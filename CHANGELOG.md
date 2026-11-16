@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1] - Unreleased
+
+- **A sample review you can check:** `examples/acme-helpdesk`, a deliberately unsafe support chat with 18 planted issues, its answer key (committed before the run) and Hank's full report in `docs/sample-review/`.
+- **README rewritten as a case study:** the problem, research, how it works, the sample score, the build from the 1.x scanner to 2.0, what went wrong and what I learned.
+- **Contributor files:** CONTRIBUTING, issue and pull request templates, and a how-it-works diagram.
+- No change to the skill, the agent or the briefs.
+
 ## [2.0.0] - 2026-09-29
 
 Hank is now the analyst himself, not a scanner.

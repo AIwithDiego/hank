@@ -1,0 +1,6 @@
+{
+  "mcpServers": {
+    "acme-helpdesk": { "command": "python", "args": ["mcp_server.py"] },
+    "shipping-rates": { "command": "npx", "args": ["-y", "shipping-rates-mcp@latest"] }
+  }
+}
