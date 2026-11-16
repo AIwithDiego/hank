@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Acme Outdoor · Help</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <script src="https://connect.facebook.net/en_US/fbevents.js"></script>
+</head>
+<body>
+  <h1>Hi, I'm Sam from Acme Outdoor. How can I help?</h1>
+  <form id="chat">
+    <input name="email" type="email" placeholder="Your email" required>
+    <textarea name="message" placeholder="Your question"></textarea>
+    <button>Send</button>
+  </form>
+  <div id="log"></div>
+  <script>
+    document.getElementById('chat').onsubmit = async (e) => {
+      e.preventDefault();
+      const res = await fetch('/chat', { method: 'POST', body: new FormData(e.target) });
+      document.getElementById('log').innerHTML += await res.text();
+    };
+  </script>
+</body>
+</html>
